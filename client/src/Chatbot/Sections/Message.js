@@ -42,7 +42,7 @@ function Message(props) {
                 </div>
             )
         }
-        else if (!(props.text[0].indexOf('공지') == -1)) {
+        else if (!(props.text[0].indexOf('공지\n') == -1)) {
             var words = props.text[0].split('\n');
             return (
                 <div>
