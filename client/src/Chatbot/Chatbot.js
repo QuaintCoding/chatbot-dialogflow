@@ -17,6 +17,8 @@ import DirectionsComponent from './Sections/Directions';
 import TotalDepartmentComponent from './Sections/TotalDepartment';
 import PhonebookComponent from './Sections/Phonebook';
 import EnterUniversityComponent from './Sections/EnterUniversity';
+import CreateHumanityDepartmentComponent from './Sections/CreatHumanityDepartment';
+import ComputerDepartmentComponent from './Sections/ComputerDepartment';
 
 function Chatbot() {
     const dispatch = useDispatch();
