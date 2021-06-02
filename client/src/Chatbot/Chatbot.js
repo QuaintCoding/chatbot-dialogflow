@@ -6,19 +6,27 @@ import Message from './Sections/Message';
 import { List, Icon, Avatar } from 'antd';
 import LaptopComponent from './Sections/laptop';
 import WelcomeComponent from './Sections/welcome';
-import ICTdesignDepartmentComponent from './Sections/ICTdesignDepartment';
+import ICTdesignDepartmentComponent from './Sections/Department/ICTdesignDepartment';
 import WifiComponent from './Sections/WifiSetting';
-import GlobalFashionDepartmentComponent from './Sections/GlobalFashionDepartment';
-import ITConvergenceDepartmentComponent from './Sections/ITConvergenceDepartment';
-import SocialScienceDepartmentComponent from './Sections/SocialScienceDepartment';
-import ArtdesignDepartmentComponent from './Sections/ArtdesignDepartment';
-import SmartoperationDepartmentComponent from './Sections/SmartoperationDepartment';
+import GlobalFashionDepartmentComponent from './Sections/Department/GlobalFashionDepartment';
+import ITConvergenceDepartmentComponent from './Sections/Department/ITConvergenceDepartment';
+import SocialScienceDepartmentComponent from './Sections/Department/SocialScienceDepartment';
+import ArtdesignDepartmentComponent from './Sections/Department/ArtdesignDepartment';
+import SmartoperationDepartmentComponent from './Sections/Department/SmartoperationDepartment';
 import DirectionsComponent from './Sections/Directions';
 import TotalDepartmentComponent from './Sections/TotalDepartment';
 import PhonebookComponent from './Sections/Phonebook';
 import EnterUniversityComponent from './Sections/EnterUniversity';
-import CreateHumanityDepartmentComponent from './Sections/CreatHumanityDepartment';
-import ComputerDepartmentComponent from './Sections/ComputerDepartment';
+import CreateHumanityDepartmentComponent from './Sections/Department/CreatHumanityDepartment';
+import ComputerDepartmentComponent from './Sections/Department/ComputerDepartment';
+import HumanityArtCollegeComponent from './Sections/College/HumanityArtCollege'
+import SocialScienceCollegeComponent from './Sections/College/SocialScienceCollege';
+import DesignCollegeComponent from './Sections/College/DesignCollege';
+import EngineeringCollegeComponent from './Sections/College/EngineeringCollege';
+import MecatronicsDepartmentComponent from './Sections/Department/MecatronicsDepartment';
+import BeautyManagementDepartmentComponent from './Sections/Department/Beauty_Management_Department';
+import CafeteriaComponent from './Sections/Cafeteria';
+import CalenderComponent from './Sections/AcademicCalender';
 
 function Chatbot() {
     const dispatch = useDispatch();
@@ -90,7 +98,7 @@ function Chatbot() {
                 who: '한성봇',
                 content: {
                     text: {
-                        text: " Error just occured, please check the problem"
+                        text: " textQuery Error just occured, please check the problem"
                     }
                 }
             }
@@ -131,7 +139,7 @@ function Chatbot() {
                 who: '한성봇',
                 content: {
                     text: {
-                        text: " Error just occured, please check the problem"
+                        text: " eventQuery Error just occured, please check the problem"
                     }
                 }
             }
@@ -199,8 +207,10 @@ function Chatbot() {
                         return CreateHumanityDepartmentComponent(message);
                     case 'department_Computer':
                         return ComputerDepartmentComponent(message);
-                    case 'department_Total':
-                        return TotalDepartmentComponent(message);
+                    case 'department_Mechatronics':
+                        return MecatronicsDepartmentComponent(message);
+                    case 'department_BeautyManagement':
+                        return BeautyManagementDepartmentComponent(message);
                     case 'directions':
                         return DirectionsComponent(message);
                     case 'department_Total':
@@ -210,6 +220,20 @@ function Chatbot() {
                         break;
                     case 'enterUniversity':
                         ResultComponent = EnterUniversityComponent(message);
+                        break;
+                    case 'college_CreatHumanity':
+                        return HumanityArtCollegeComponent(message);
+                    case 'college_SocialScience':
+                        return SocialScienceCollegeComponent(message);
+                    case 'college_Design':
+                        return DesignCollegeComponent(message);
+                    case 'college_Engineering':
+                        return EngineeringCollegeComponent(message);
+                    case 'cafeteria':
+                        ResultComponent = CafeteriaComponent(message);
+                        break;
+                    case 'academic_Calendar':
+                        ResultComponent = CalenderComponent(message);
                         break;
                 }
             }

@@ -1,19 +1,17 @@
 import React from 'react'
 import Axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { saveMessage } from '../../_actions/message_actions';
+import { saveMessage } from '../../../_actions/message_actions';
 import { List, Icon, Avatar } from 'antd';
-import postTextQuery from '../Chatbot'
 
-function TotalDepartmentComponent(message) {
+function SocialScienceCollegeComponent(message) {
 
-    const AvatarSrc = message.who === '한성봇' ? <img src={require("../Images/han_bugi2.png")} /> : <Icon type={null} />
+    const AvatarSrc = message.who === '한성봇' ? <img src={require("../../Images/han_bugi2.png")} /> : <Icon type={null} />
 
     const richContent = message.content.payload.fields.richContent;
-    const jsonObj1 = richContent.listValue.values[0].listValue.values[1].structValue.fields;
-    const jsonObj2 = richContent.listValue.values[0].listValue.values[3].structValue.fields;
-    const jsonObj3 = richContent.listValue.values[0].listValue.values[5].structValue.fields;
-    const jsonObj4 = richContent.listValue.values[0].listValue.values[7].structValue.fields;
+    const list_department = richContent.listValue.values[0].listValue.values[2].structValue.fields.options.listValue.values;
+    const department1 = list_department[0].structValue.fields;
+    const department2 = list_department[1].structValue.fields;
 
     const dispatch = useDispatch();
 
@@ -85,38 +83,18 @@ function TotalDepartmentComponent(message) {
                 <div>
                     <List>
                         <List.Item onClick={() => {
-                            textQuery("크리에이티브 인문예술대학")
+                            textQuery(department1.text.stringValue)
                         }}>
                             <List.Item.Meta
-                                title={jsonObj1.title.stringValue}
-                                description={jsonObj1.subtitle.stringValue}
+                                title={department1.text.stringValue}
                             />
                         </List.Item>
 
                         <List.Item onClick={() => {
-                            textQuery("미래융합 사회과학대학")
+                            textQuery(department2.text.stringValue)
                         }}>
                             <List.Item.Meta
-                                title={jsonObj2.title.stringValue}
-                                description={jsonObj2.subtitle.stringValue}
-                            />
-                        </List.Item>
-
-                        <List.Item onClick={() => {
-                            textQuery("디자인대학")
-                        }}>
-                            <List.Item.Meta
-                                title={jsonObj3.title.stringValue}
-                                description={jsonObj3.subtitle.stringValue}
-                            />
-                        </List.Item>
-
-                        <List.Item onClick={() => {
-                            textQuery("IT공과대학")
-                        }}>
-                            <List.Item.Meta
-                                title={jsonObj4.title.stringValue}
-                                description={jsonObj4.subtitle.stringValue}
+                                title={department2.text.stringValue}
                             />
                         </List.Item>
 
@@ -127,4 +105,4 @@ function TotalDepartmentComponent(message) {
     </List.Item >)
 }
 
-export default TotalDepartmentComponent;
+export default SocialScienceCollegeComponent;

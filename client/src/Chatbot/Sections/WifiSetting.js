@@ -39,7 +39,6 @@ function WifiComponent(message) {
                             }
                             actions={[
                                 <a target="_blank" rel="noopener noreferrer" href={jsonObj3.link.stringValue}>
-
                                     {jsonObj3.text.stringValue}
                                 </a>
                             ]}
