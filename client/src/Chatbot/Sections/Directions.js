@@ -41,14 +41,14 @@ function DirectionsComponent(message) {
                                 description={jsonObj3.subtitle.stringValue}
                             />
                         </Card>
-                        <Button href={jsonObj4.link.stringValue}>
+                        <Button target="_blank" href={jsonObj4.link.stringValue}>
                             {jsonObj4.text.stringValue}
                         </Button>
-                        
-                        <Button href={jsonObj5.link.stringValue}>
+
+                        <Button target="_blank" href={jsonObj5.link.stringValue}>
                             {jsonObj5.text.stringValue}
                         </Button>
-                        <Button href={jsonObj6.link.stringValue}>
+                        <Button target="_blank" href={jsonObj6.link.stringValue}>
                             {jsonObj6.text.stringValue}
                         </Button>
                     </div>

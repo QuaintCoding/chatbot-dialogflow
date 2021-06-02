@@ -193,6 +193,12 @@ function Chatbot() {
                         return ArtdesignDepartmentComponent(message);
                     case 'department_Smartoperation':
                         return SmartoperationDepartmentComponent(message);
+                    case 'department_CreatHumanity':
+                        return CreateHumanityDepartmentComponent(message);
+                    case 'department_Computer':
+                        return ComputerDepartmentComponent(message);
+                    case 'department_Total':
+                        return TotalDepartmentComponent(message);
                     case 'directions':
                         return DirectionsComponent(message);
                     case 'department_Total':

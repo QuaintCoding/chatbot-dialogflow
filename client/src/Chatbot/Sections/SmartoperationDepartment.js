@@ -10,7 +10,7 @@ function SmartoperationDepartmentComponent(message) {
     const jsonObj1 = richContent.listValue.values[0].listValue.values[1].structValue.fields;
     const jsonObj2 = richContent.listValue.values[0].listValue.values[2].structValue.fields;
     const jsonObj3 = richContent.listValue.values[0].listValue.values[3].structValue.fields;
-   
+
 
     return (< List.Item style={{ padding: '1rem' }}>
         <List.Item.Meta
@@ -21,19 +21,19 @@ function SmartoperationDepartmentComponent(message) {
                     <List>
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj1.link.stringValue}>{jsonObj1.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj1.link.stringValue}>{jsonObj1.text.stringValue}</a>}
                             />
                         </List.Item>
 
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj2.link.stringValue}>{jsonObj2.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj2.link.stringValue}>{jsonObj2.text.stringValue}</a>}
                             />
                         </List.Item>
 
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj3.link.stringValue}>{jsonObj3.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj3.link.stringValue}>{jsonObj3.text.stringValue}</a>}
                             />
                         </List.Item>
 

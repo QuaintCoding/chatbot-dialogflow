@@ -18,7 +18,7 @@ function WelcomeComponent(message) {
             }
             actions={[
                 <a target="_blank" rel="noopener noreferrer" href={jsonObj2.actionLink.stringValue}>
-                    <Icon type="ellipsis" key="ellipsis" />
+                    {"홈페이지로 가기"}
                 </a>
             ]}
         >

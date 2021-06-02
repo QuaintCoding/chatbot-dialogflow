@@ -54,25 +54,25 @@ function Message(props) {
                                 <List>
                                     <List.Item>
                                         <List.Item.Meta
-                                            title={<a href={words[2]}>{words[1]}</a>}
+                                            title={<a target="_blank" href={words[2]}>{words[1]}</a>}
                                         />
                                     </List.Item>
 
                                     <List.Item>
                                         <List.Item.Meta
-                                            title={<a href={words[4]}>{words[3]}</a>}
+                                            title={<a target="_blank" href={words[4]}>{words[3]}</a>}
                                         />
                                     </List.Item>
 
                                     <List.Item>
                                         <List.Item.Meta
-                                            title={<a href={words[6]}>{words[5]}</a>}
+                                            title={<a target="_blank" href={words[6]}>{words[5]}</a>}
                                         />
                                     </List.Item>
 
                                     <List.Item>
                                         <List.Item.Meta
-                                            title={<a href="https://www.hansung.ac.kr/hansung/1819/subview.do">{"더 많은 공지를 보고싶다면 클릭하세요"}</a>}
+                                            title={<a target="_blank" href="https://www.hansung.ac.kr/hansung/1819/subview.do">{"더 많은 공지를 보고싶다면 클릭하세요"}</a>}
                                         />
                                     </List.Item>
                                 </List>

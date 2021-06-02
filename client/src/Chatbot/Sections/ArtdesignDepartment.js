@@ -13,7 +13,7 @@ function ArtdesignDepartmentComponent(message) {
     const jsonObj4 = richContent.listValue.values[0].listValue.values[4].structValue.fields;
     const jsonObj5 = richContent.listValue.values[0].listValue.values[5].structValue.fields;
     const jsonObj6 = richContent.listValue.values[0].listValue.values[6].structValue.fields;
-   
+
 
     return (< List.Item style={{ padding: '1rem' }}>
         <List.Item.Meta
@@ -24,37 +24,37 @@ function ArtdesignDepartmentComponent(message) {
                     <List>
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj1.link.stringValue}>{jsonObj1.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj1.link.stringValue}>{jsonObj1.text.stringValue}</a>}
                             />
                         </List.Item>
 
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj2.link.stringValue}>{jsonObj2.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj2.link.stringValue}>{jsonObj2.text.stringValue}</a>}
                             />
                         </List.Item>
 
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj3.link.stringValue}>{jsonObj3.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj3.link.stringValue}>{jsonObj3.text.stringValue}</a>}
                             />
                         </List.Item>
 
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj4.link.stringValue}>{jsonObj4.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj4.link.stringValue}>{jsonObj4.text.stringValue}</a>}
                             />
                         </List.Item>
 
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj5.link.stringValue}>{jsonObj5.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj5.link.stringValue}>{jsonObj5.text.stringValue}</a>}
                             />
                         </List.Item>
 
                         <List.Item>
                             <List.Item.Meta
-                                title={<a href={jsonObj6.link.stringValue}>{jsonObj6.text.stringValue}</a>}
+                                title={<a target="_blank" href={jsonObj6.link.stringValue}>{jsonObj6.text.stringValue}</a>}
                             />
                         </List.Item>
 

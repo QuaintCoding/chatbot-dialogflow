@@ -19,31 +19,38 @@ function TotalDepartmentComponent(message) {
             description={
                 <div>
                     <List>
-                        <List.Item >
+                        <List.Item onClick={() => {
+
+                        }}>
                             <List.Item.Meta
-                                onClick={"https://www.naver.com/"}
                                 title={jsonObj1.title.stringValue}
                                 description={jsonObj1.subtitle.stringValue}
                             />
                         </List.Item>
 
-                        <List.Item>
+                        <List.Item onClick={() => {
+
+                        }}>
                             <List.Item.Meta
-                              title={<a href={"https://www.naver.com/"}>{jsonObj2.title.stringValue}</a>}
+                                title={<a target="_blank" href={"https://www.naver.com/"}>{jsonObj2.title.stringValue}</a>}
                                 description={jsonObj2.subtitle.stringValue}
                             />
                         </List.Item>
 
-                        <List.Item>
+                        <List.Item onClick={() => {
+
+                        }}>
                             <List.Item.Meta
-                              title={<a href={"https://www.naver.com/"}>{jsonObj3.title.stringValue}</a>}
+                                title={<a target="_blank" href={"https://www.naver.com/"}>{jsonObj3.title.stringValue}</a>}
                                 description={jsonObj3.subtitle.stringValue}
                             />
                         </List.Item>
 
-                        <List.Item>
+                        <List.Item onClick={() => {
+
+                        }}>
                             <List.Item.Meta
-                              title={<a href={"https://www.naver.com/"}>{jsonObj4.title.stringValue}</a>}
+                                title={<a target="_blank" href={"https://www.naver.com/"}>{jsonObj4.title.stringValue}</a>}
                                 description={jsonObj4.subtitle.stringValue}
                             />
                         </List.Item>

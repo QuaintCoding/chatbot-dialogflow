@@ -13,8 +13,6 @@
     "frontend": "npm run front --prefix client",
     "dev": "concurrently \"npm run backend\"  \"npm run start --prefix client\""
   },
-  "author": "Jaewon Ahn",
-  "license": "ISC",
   "dependencies": {
     "actions-on-google": "^2.6.0",
     "body-parser": "^1.18.3",
