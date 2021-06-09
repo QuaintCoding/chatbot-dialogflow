@@ -3,11 +3,10 @@ import Axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { saveMessage } from '../../_actions/message_actions';
 import { List, Icon, Avatar } from 'antd';
-import postTextQuery from '../Chatbot'
 
 function TotalDepartmentComponent(message) {
 
-    const AvatarSrc = message.who === '한성봇' ? <img src={require("../Images/han_bugi2.png")} /> : <Icon type={null} />
+    const AvatarSrc = message.who === '한성봇' ? <img src={require("../Images/han_bugi2.png")} alt="한성봇 이미지" /> : <Icon type={null} />
 
     const richContent = message.content.payload.fields.richContent;
     const jsonObj1 = richContent.listValue.values[0].listValue.values[1].structValue.fields;

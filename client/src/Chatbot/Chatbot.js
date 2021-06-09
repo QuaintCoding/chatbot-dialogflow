@@ -27,6 +27,13 @@ import MecatronicsDepartmentComponent from './Sections/Department/MecatronicsDep
 import BeautyManagementDepartmentComponent from './Sections/Department/Beauty_Management_Department';
 import CafeteriaComponent from './Sections/Cafeteria';
 import CalenderComponent from './Sections/AcademicCalender';
+import DailyRestaurantMenuComponent from './Sections/DailyRestaurantMenu';
+import ProfessorComponent from './Sections/Professor';
+import CampusMapComponent from './Sections/CampusMap';
+import ScholarshipComponent from './Sections/scholarship';
+import GeneralInformationComponent from './Sections/GeneralInformation';
+import LeaveReturnComponent from './Sections/LeaveReturn';
+import HopePageComponent from './Sections/HopePage';
 
 function Chatbot() {
     const dispatch = useDispatch();
@@ -35,10 +42,15 @@ function Chatbot() {
     // React Reference for 'scrolling to bottom'
     const scrollRef = useRef();
     const scrollToBottom = () => {
-        if (scrollRef.current === undefined) {
-            console.log("fucked")
+        if (scrollRef.current == null || scrollRef.current === undefined) {
+            console.log("scrollRef not work")
         }
         else {
+            if (scrollRef.current.scrollIntoView == null || scrollRef.current.scrollIntoView === undefined) {
+                console.log("scrollIntoView() not work");
+                return;
+            }
+
             scrollRef.current.scrollIntoView();
         }
     }
@@ -47,8 +59,8 @@ function Chatbot() {
     useEffect(() => {
 
         eventQuery('Welcome')
-
-    }, [])
+        console.log(scrollRef.current);
+    }, [scrollRef])
 
     //text는 keyPressHanlder에서 사용자가 입력한 메시지
     const textQuery = async (text) => {
@@ -174,7 +186,7 @@ function Chatbot() {
             return <Message key={i} who={message.who} text={message.content.text.text} />
         }
         else if (message.content && message.content.payload.fields) { // richContent 그대로 왔음
-            const AvatarSrc = message.who === '한성봇' ? <img src={require("./Images/han_bugi2.png")} /> : <Icon type={null} />
+            const AvatarSrc = message.who === '한성봇' ? <img src={require("./Images/han_bugi2.png")} alt="한성봇 이미지" /> : <Icon type={null} />
 
             var ResultComponent;
 
@@ -215,6 +227,10 @@ function Chatbot() {
                         return DirectionsComponent(message);
                     case 'department_Total':
                         return TotalDepartmentComponent(message);
+                    case 'campusMap':
+                        return CampusMapComponent(message);
+                    case 'scholarship':
+                        return ScholarshipComponent(message);
                     case 'phonebook':
                         ResultComponent = PhonebookComponent(message);
                         break;
@@ -235,6 +251,25 @@ function Chatbot() {
                     case 'academic_Calendar':
                         ResultComponent = CalenderComponent(message);
                         break;
+                    case 'student_restaurant':
+                        return DailyRestaurantMenuComponent(message);
+                    case 'staff_restaurant':
+                        return DailyRestaurantMenuComponent(message);
+                    case 'student_restaurant_alter':
+                        return DailyRestaurantMenuComponent(message);
+                    case 'professor':
+                        return ProfessorComponent(message);
+                    case 'hope_page':
+                        ResultComponent = HopePageComponent(message);
+                        break;
+                    case 'general_information':
+                        ResultComponent = GeneralInformationComponent(message);
+                        break;
+                    case 'leave and return':
+                        ResultComponent = LeaveReturnComponent(message);
+                        break;
+                    default:
+                        ResultComponent = null;
                 }
             }
             else {

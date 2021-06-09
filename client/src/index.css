@@ -22,9 +22,20 @@ body {
 
 .ant-list-item-meta-title {
   font-size: 14px !important;
+  color:black;
 }
 
 .ant-list-item-meta-description {
   color: black !important;
 }
 
+.user_balloon {
+  background-color: rgb(201, 232, 253);
+  border-radius: 10px;
+}
+
+.bot_balloon {
+  padding: 5px;
+  background-color: skyblue;
+  border-radius: 10px;
+}

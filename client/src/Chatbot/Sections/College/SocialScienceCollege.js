@@ -6,7 +6,7 @@ import { List, Icon, Avatar } from 'antd';
 
 function SocialScienceCollegeComponent(message) {
 
-    const AvatarSrc = message.who === '한성봇' ? <img src={require("../../Images/han_bugi2.png")} /> : <Icon type={null} />
+    const AvatarSrc = message.who === '한성봇' ? <img src={require("../../Images/han_bugi2.png")} alt="한성봇 이미지" /> : <Icon type={null} />
 
     const richContent = message.content.payload.fields.richContent;
     const list_department = richContent.listValue.values[0].listValue.values[2].structValue.fields.options.listValue.values;
