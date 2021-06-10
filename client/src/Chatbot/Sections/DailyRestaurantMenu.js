@@ -87,6 +87,30 @@ function DailyRestaurantMenuComponent(message) {
                 }
             />
         </List.Item >)
+    } else if (intent === "mealgaok") {
+        const jsonObj1 = contents[1].structValue.fields;
+
+        return (< List.Item style={{ padding: '1rem' }}>
+            <List.Item.Meta
+                avatar={<Avatar icon={AvatarSrc} />}
+                title={message.who}
+                description={
+                    <Row gutter={12}>
+                        <Col span={12}>
+                            <Card
+                                title={
+                                    <a target="_blank" rel="noopener noreferrer" href={jsonObj1.actionLink.stringValue}>
+                                        {jsonObj1.title.stringValue}
+                                    </a>
+                                }
+                            >
+                                {jsonObj1.subtitle.stringValue}
+                            </Card>
+                        </Col>
+                    </Row>
+                }
+            />
+        </List.Item >)
     }
 }
 export default DailyRestaurantMenuComponent;

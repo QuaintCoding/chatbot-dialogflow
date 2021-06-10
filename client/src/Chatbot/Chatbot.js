@@ -34,6 +34,8 @@ import ScholarshipComponent from './Sections/scholarship';
 import GeneralInformationComponent from './Sections/GeneralInformation';
 import LeaveReturnComponent from './Sections/LeaveReturn';
 import HopePageComponent from './Sections/HopePage';
+import RestaurantListComponent from './Sections/RestaurantList';
+import NoticeListComponent from './Sections/noticeList';
 
 function Chatbot() {
     const dispatch = useDispatch();
@@ -251,12 +253,16 @@ function Chatbot() {
                     case 'academic_Calendar':
                         ResultComponent = CalenderComponent(message);
                         break;
-                    case 'student_restaurant':
+                    case 'notice':
+                        return NoticeListComponent(message);
+                    case 'mealgaok':
                         return DailyRestaurantMenuComponent(message);
                     case 'staff_restaurant':
                         return DailyRestaurantMenuComponent(message);
                     case 'student_restaurant_alter':
                         return DailyRestaurantMenuComponent(message);
+                    case 'restaurant_Total':
+                        return RestaurantListComponent(message);
                     case 'professor':
                         return ProfessorComponent(message);
                     case 'hope_page':
@@ -308,7 +314,7 @@ function Chatbot() {
             height: 700, width: 700,
             border: '3px solid black', borderRadius: '7px'
         }}>
-            <div style={{ height: 644, width: '100%', overflow: 'auto' , background: '#C9E8FD'}}>
+            <div style={{ height: 644, width: '100%', overflow: 'auto', background: '#C9E8FD' }}>
 
                 {renderMessage(messagesFromRedux)}
 

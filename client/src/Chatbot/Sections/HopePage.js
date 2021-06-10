@@ -17,7 +17,7 @@ function HopePageComponent(message) {
             }
             actions={[
                 <a target="_blank" rel="noopener noreferrer" href={jsonObj2.link.stringValue}>
-                    <Icon type="ellipsis" key="ellipsis" />
+                    click <Icon type="link" key="link" />
                 </a>
             ]}
         >

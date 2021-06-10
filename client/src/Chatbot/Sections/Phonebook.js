@@ -12,7 +12,7 @@ function PhonebookComponent(message) {
             style={{ width: 300 }}
             actions={[
                 <a target="_blank" rel="noopener noreferrer" href={fields['actionLink'].stringValue}>
-                    <Icon type="ellipsis" key="ellipsis" />
+                    click <Icon type="link" key="link" />
                 </a>
             ]}
         >
