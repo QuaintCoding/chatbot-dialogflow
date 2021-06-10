@@ -1,4 +1,4 @@
-* {
+{
   word-break: break-all;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -26,16 +26,21 @@ body {
 }
 
 .ant-list-item-meta-description {
-  color: black !important;
+  color: black;
 }
 
 .user_balloon {
-  background-color: rgb(201, 232, 253);
+  background-color: rgb(30, 38, 155);
   border-radius: 10px;
 }
 
-.bot_balloon {
-  padding: 5px;
-  background-color: skyblue;
+.user_balloon .ant-list-item-meta-description {
+  color: white;
+}
+
+.bot_balloon .ant-list-item-meta-description {
+  color: black;
+  padding: 6px;
+  background-color: white;
   border-radius: 10px;
 }
