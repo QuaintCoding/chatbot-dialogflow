@@ -308,7 +308,7 @@ function Chatbot() {
             height: 700, width: 700,
             border: '3px solid black', borderRadius: '7px'
         }}>
-            <div style={{ height: 644, width: '100%', overflow: 'auto' }}>
+            <div style={{ height: 644, width: '100%', overflow: 'auto' , background: '#C9E8FD'}}>
 
                 {renderMessage(messagesFromRedux)}
 
