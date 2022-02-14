@@ -9,7 +9,43 @@ function Message(props) {
     const AvatarSrc = props.who === '한성봇' ? <img src={require("../Images/han_bugi2.png")} alt="한성봇 이미지" /> : <Icon type={null} />
 
     if (props.who === '한성봇') {
+<<<<<<< Updated upstream
         if (!(props.text[0].indexOf('공지\n') === -1)) {
+=======
+        if (!(props.text[0].indexOf('교수님') == -1)) {
+            var words = props.text[0].split('\n');
+            var word = words[1] + '\n' + words[2] + '\n' + words[3];
+            word = word.split('\n').map(line => { return (<span>{line}<br /></span>) })
+            console.log(`props: ${words[0]}+'\n'+${words[1]}+'\n'+${words[2]}+'\n'+${words[3]}+'\n'+${words[4]}`)
+            return (
+                <div>
+                    <List.Item style={{ padding: '1rem' }}>
+                        <List.Item.Meta
+                            avatar={<Avatar icon={AvatarSrc} />}
+                            title={props.who}
+                            description={
+                                <Card
+                                    style={{ width: 300 }}
+                                    cover={
+                                        <img
+                                            alt={words[0]}
+                                            src={words[4]} />
+                                    }
+                                >
+                                    <Meta
+                                        title={words[0]}
+                                        description={word}
+                                    />
+                                </Card>
+
+                            }
+                        />
+                    </List.Item>
+                </div>
+            )
+        }
+        else if (!(props.text[0].indexOf('공지\n') == -1)) {
+>>>>>>> Stashed changes
             var words = props.text[0].split('\n');
             return (
                 <div>
@@ -21,25 +57,41 @@ function Message(props) {
                                 <List>
                                     <List.Item>
                                         <List.Item.Meta
+<<<<<<< Updated upstream
                                             title={<a target="_blank" rel="noopener noreferrer" href={words[2]}>{words[1]}</a>}
+=======
+                                            title={<a target="_blank" href={words[2]}>{words[1]}</a>}
+>>>>>>> Stashed changes
                                         />
                                     </List.Item>
 
                                     <List.Item>
                                         <List.Item.Meta
+<<<<<<< Updated upstream
                                             title={<a target="_blank" rel="noopener noreferrer" href={words[4]}>{words[3]}</a>}
+=======
+                                            title={<a target="_blank" href={words[4]}>{words[3]}</a>}
+>>>>>>> Stashed changes
                                         />
                                     </List.Item>
 
                                     <List.Item>
                                         <List.Item.Meta
+<<<<<<< Updated upstream
                                             title={<a target="_blank" rel="noopener noreferrer" href={words[6]}>{words[5]}</a>}
+=======
+                                            title={<a target="_blank" href={words[6]}>{words[5]}</a>}
+>>>>>>> Stashed changes
                                         />
                                     </List.Item>
 
                                     <List.Item>
                                         <List.Item.Meta
+<<<<<<< Updated upstream
                                             title={<a target="_blank" rel="noopener noreferrer" href="https://www.hansung.ac.kr/hansung/1819/subview.do">{"더 많은 공지를 보고싶다면 클릭하세요"}</a>}
+=======
+                                            title={<a target="_blank" href="https://www.hansung.ac.kr/hansung/1819/subview.do">{"더 많은 공지를 보고싶다면 클릭하세요"}</a>}
+>>>>>>> Stashed changes
                                         />
                                     </List.Item>
                                 </List>

@@ -44,7 +44,11 @@ function DirectionsComponent(message) {
                         <Button target="_blank" href={jsonObj4.link.stringValue}>
                             {jsonObj4.text.stringValue}
                         </Button>
+<<<<<<< Updated upstream
 
+=======
+                        
+>>>>>>> Stashed changes
                         <Button target="_blank" href={jsonObj5.link.stringValue}>
                             {jsonObj5.text.stringValue}
                         </Button>
