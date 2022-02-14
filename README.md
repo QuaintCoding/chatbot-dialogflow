@@ -1,4 +1,4 @@
-## Hansung Chatbot
+## Hansung Bot
 Recently, non-face-to-face classes have been held due to COVID-19.
 
 Before COVID-19, students were able to learn a lot of information through seniors and colleagues.
